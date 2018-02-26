@@ -57,8 +57,9 @@ friendly format and creating a PDF document with the relevant data visible.
 These classes may be broken down however due to potentially having too many responsibilities.
 
 I have decided to use a static html page that uses JavaScript to make XHR's to gather the required
-JSON from the api. The page being static means the user will not have to install anything to setup
-and can simply open the weatherNow.html in google chrome and use it.
+JSON from the api. The page being static means the user will not have to install anything to setup.
+They will need to put their API key in the ApiClient class. Then to run just open the WeatherNow.html
+document.
 
 The ApiClient will be instantiated with a Printer object that will be used to format and display the data
 retrieved.
