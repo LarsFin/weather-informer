@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Weather now</title>
+    <!-- Source for the jsPDF scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+    <script src="src/apiClient.js"></script>
+    <script src="src/printer.js"></script>
+    <script src="src/pageInteraction.js"></script>
+    <script>
+      //Document printer created which is used in index.js
+      printer = new Printer();
+      //Document ApiClient created with the above stated printer passed in as a
+      //parameter.
+      apic = new ApiClient(printer);
+    </script>
+  </head>
+  <body>
+    <textarea id="locationField" style="height:19px;width:128px;resize:none;"></textarea>&nbsp;&nbsp;&nbsp;
+    <button id="getWeather">Get Current Weather</button>&nbsp;&nbsp;&nbsp;
+    <button id="savePDF">Save as PDF</button>
+    <br>
+    <br>
+    <div id="weatherInfo"></div>
+  </body>
+</html>
